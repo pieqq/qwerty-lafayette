@@ -296,8 +296,9 @@
     <a href="#linux">#</a> </h3>
   <p> <strong>Méthode simple :</strong> copier le pilote dans <code>xkb/symbols/custom</code>. </p>
   <pre>
+  mkdir -p $HOME/.config/xkb/symbols
   wget https://qwerty-lafayette.org/releases/lafayette_linux_v0.9.xkb_custom
-  sudo mv lafayette_linux_v0.9.xkb_custom ${XKB_CONFIG_ROOT:-/usr/share/X11/xkb}/symbols/custom </pre>
+  mv lafayette_linux_v0.9.xkb_custom ${XKB_CONFIG_ROOT:-$HOME/.config/xkb}/symbols/custom </pre>
   <p> La disposition de clavier est disponible dans le gestionnaire de
     préférences du bureau sous un nom générique (« custom layout »,
     « disposition personnalisée », etc.).
